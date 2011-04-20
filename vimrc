@@ -13,7 +13,7 @@ set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set expandtab
-set list listchars=tab:\ \ ,trail:·
+set listchars=tab:>-,trail:.
 
 " Searching
 set hlsearch
@@ -141,3 +141,27 @@ runtime! macros/matchit.vim
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
+
+" Automatically save and reload sessions
+let g:session_autoload = 1
+
+" CUA editor shortcuts (CTRL + X/C/V)
+source $VIMRUNTIME/mswin.vim
+
+" enable horizontal scrollbar
+set guioptions+=b
+
+" make ack under Ubuntu available in vim
+let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+
+" make javascript to use jQuery code style
+" au FileType javascript set noexpandtab tabstop=4 shiftwidth=4
+" Rails.vim always overrides the above (with autoload) but allows this:
+au User Rails/**/*.js set noexpandtab tabstop=4 shiftwidth=4
+
+" mark all words same as word under cursor (like in Netbeans)
+au CursorMoved * silent! exe printf('match IncSearch /\<%s\>/', expand('<cword>'))
+
+" allow deleting selection without updating the clipboard (yank buffer)
+vnoremap x "_x
+vnoremap X "_X

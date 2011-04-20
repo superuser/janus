@@ -154,6 +154,9 @@ vim_plugin_task "syntastic",        "git://github.com/scrooloose/syntastic.git"
 vim_plugin_task "puppet",           "git://github.com/ajf/puppet-vim.git"
 vim_plugin_task "scala",            "git://github.com/bdd/vim-scala.git"
 vim_plugin_task "gist-vim",         "git://github.com/mattn/gist-vim.git"
+vim_plugin_task "bufexplorer",      "git://github.com/slack/vim-bufexplorer.git"
+vim_plugin_task "session",          "http://peterodding.com/code/vim/downloads/session.zip"
+vim_plugin_task "easygrep",			    "git://github.com/vim-scripts/EasyGrep.git"
 
 vim_plugin_task "command_t",        "git://github.com/wincent/Command-T.git" do
   sh "find ruby -name '.gitignore' | xargs rm"

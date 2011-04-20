@@ -65,7 +65,7 @@ endif
 set guioptions-=T
 
 " Default gui color scheme
-color ir_black
+colorscheme desert
 
 " ConqueTerm wrapper
 function StartTerm()
