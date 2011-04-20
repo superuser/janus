@@ -7,7 +7,6 @@ autoload
 doc
 plugin
 ruby
-snippets
 syntax
 syntax_checkers
 ftdetect
