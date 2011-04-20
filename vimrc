@@ -171,3 +171,8 @@ au CursorMoved * silent! exe printf('match IncSearch /\<%s\>/', expand('<cword>'
 " allow deleting selection without updating the clipboard (yank buffer)
 vnoremap x "_x
 vnoremap X "_X
+
+" no bells at all
+set noerrorbells
+set visualbell
+set t_vb=

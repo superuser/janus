@@ -227,3 +227,8 @@ call s:DefineCommand("mkdir", "Mkdir")
 if filereadable(expand("~/.gvimrc.local"))
   source ~/.gvimrc.local
 endif
+
+" No bells at all
+set noerrorbells
+set visualbell
+set t_vb=
