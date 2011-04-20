@@ -151,6 +151,9 @@ endif
 " Automatically save and reload sessions
 let g:session_autoload = 1
 
+" Make , the leader key
+let mapleader = ","
+
 " CUA editor shortcuts (CTRL + X/C/V)
 source $VIMRUNTIME/mswin.vim
 
